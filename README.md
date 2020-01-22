@@ -1,7 +1,8 @@
 ### Check it here
-[Demo!]()
+[Demo: !]()
 ### How to Use
 InWord works with it jQuery and Bootstrap. After Jquery and Bootstrap, just add the inword.js and inword.css, and see the magic!
+Download this repo and open Index.html and InBanglaWord.html and see the demo
 ```
 <!-- CSS-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
