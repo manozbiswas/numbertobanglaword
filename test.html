@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+
+    <script>
+        // var eng_to_bn = {
+        //     '1': '১',
+        //     '2': '২',
+        //     '3': '৩',
+        //     '4': '৪',
+        //     '5': '৫',
+        //     '6': '৬',
+        //     '7': '৭',
+        //     '8': '৮',
+        //     '9': '৯',
+        //     '0': '০'
+        // };
+        // var num_to_bd = {
+        //     '0': 'শূন্য',
+        //     '1': 'এক',
+        //     '2': 'দুই',
+        //     '3': 'তিন',
+        //     '4': 'চার',
+        //     '5': 'পাঁচ',
+        //     '6': 'ছয়',
+        //     '7': 'সাত',
+        //     '8': 'আট',
+        //     '9': 'নয়',
+        //     '10': 'দশ',
+        //     '11': 'এগার',
+        //     '12': 'বার',
+        //     '13': 'তের',
+        //     '14': 'চৌদ্দ',
+        //     '15': 'পনের',
+        //     '16': 'ষোল',
+        //     '17': 'সতের',
+        //     '18': 'আঠার',
+        //     '19': 'ঊনিশ',
+        //     '20': 'বিশ',
+        //     '21': 'একুশ',
+        //     '22': 'বাইশ',
+        //     '23': 'তেইশ',
+        //     '24': 'চব্বিশ',
+        //     '25': 'পঁচিশ',
+        //     '26': 'ছাব্বিশ',
+        //     '27': 'সাতাশ',
+        //     '28': 'আঠাশ',
+        //     '29': 'ঊনত্রিশ',
+        //     '30': 'ত্রিশ',
+        //     '31': 'একত্রিশ',
+        //     '32': 'বত্রিশ',
+        //     '33': 'তেত্রিশ',
+        //     '34': 'চৌত্রিশ',
+        //     '35': 'পঁয়ত্রিশ',
+        //     '36': 'ছত্রিশ',
+        //     '37': 'সাঁইত্রিশ',
+        //     '38': 'আটত্রিশ',
+        //     '39': 'ঊনচল্লিশ',
+        //     '40': 'চল্লিশ',
+        //     '41': 'একচল্লিশ',
+        //     '42': 'বিয়াল্লিশ',
+        //     '43': 'তেতাল্লিশ',
+        //     '44': 'চুয়াল্লিশ',
+        //     '45': 'পঁয়তাল্লিশ',
+        //     '46': 'ছেচল্লিশ',
+        //     '47': 'সাতচল্লিশ',
+        //     '48': 'আটচল্লিশ',
+        //     '49': 'ঊনপঞ্চাশ',
+        //     '50': 'পঞ্চাশ',
+        //     '51': 'একান্ন',
+        //     '52': 'বায়ান্ন',
+        //     '53': 'তিপ্পান্ন',
+        //     '54': 'চুয়ান্ন',
+        //     '55': 'পঞ্চান্ন',
+        //     '56': 'ছাপ্পান্ন',
+        //     '57': 'সাতান্ন',
+        //     '58': 'আটান্ন',
+        //     '59': 'ঊনষাট',
+        //     '60': 'ষাট',
+        //     '61': 'একষট্টি',
+        //     '62': 'বাষট্টি',
+        //     '63': 'তেষট্টি',
+        //     '64': 'চৌষট্টি',
+        //     '65': 'পঁয়ষট্টি',
+        //     '66': 'ছেষট্টি',
+        //     '67': 'সাতষট্টি',
+        //     '68': 'আটষট্টি',
+        //     '69': 'ঊনসত্তর',
+        //     '70': 'সত্তর',
+        //     '71': 'একাত্তর',
+        //     '72': 'বাহাত্তর',
+        //     '73': 'তিয়াত্তর',
+        //     '74': 'চুয়াত্তর',
+        //     '75': 'পঁচাত্তর',
+        //     '76': 'ছিয়াত্তর',
+        //     '77': 'সাতাত্তর',
+        //     '78': 'আটাত্তর',
+        //     '79': 'ঊনআশি',
+        //     '80': 'আশি',
+        //     '81': 'একাশি',
+        //     '82': 'বিরাশি',
+        //     '83': 'তিরাশি',
+        //     '84': 'চুরাশি',
+        //     '85': 'পঁচাশি',
+        //     '86': 'ছিয়াশি',
+        //     '87': 'সাতাশি',
+        //     '88': 'আটাশি',
+        //     '89': 'ঊননব্বই',
+        //     '90': 'নব্বই',
+        //     '91': 'একানব্বই',
+        //     '92': 'বিরানব্বই',
+        //     '93': 'তিরানব্বই',
+        //     '94': 'চুরানব্বই',
+        //     '95': 'পঁচানব্বই',
+        //     '96': 'ছিয়ানব্বই',
+        //     '97': 'সাতানব্বই',
+        //     '98': 'আটানব্বই',
+        //     '99': 'নিরানব্বই'
+        // };
+        // var num_to_bn_decimal = {
+        //     '0': 'শূন্য ',
+        //     '1': 'এক ',
+        //     '2': 'দুই ',
+        //     '3': 'তিন ',
+        //     '4': 'চার ',
+        //     '5': 'পাঁচ ',
+        //     '6': 'ছয় ',
+        //     '7': 'সাত ',
+        //     '8': 'আট ',
+        //     '9': 'নয় '
+        // };
+        // var hundred = 'শত';
+        // var thousand = 'হাজার';
+        // var lakh = 'লক্ষ';
+        // var crore = 'কোটি';
+        //
+        //
+        // var engToBnfunc = function (number) {
+        //     bn_number = num_to_bd[number];
+        //     return bn_number;
+        // };
+        //
+        // var numberToWord = function (number) {
+        //     if (isNaN(number)) return 'Not a Number';
+        //     if (!isFloat(number)) {
+        //         var dot = number.split(".");
+        //         var decimalPart = '';
+        //         if (dot[1])
+        //             decimalPart = ' দশমিক ' + numToBnDecimalfunc(dot[1]);
+        //         return numberSelector(dot[0]) + decimalPart;
+        //     } else {
+        //         return numberSelector(number);
+        //     }
+        // };
+        //
+        // var isFloat = function (n) {
+        //     return Number(n) === n && n % 1 !== 0;
+        // };
+        // var numToBnfunc = function (number) {
+        //     var word = num_to_bd[number];
+        //     return word;
+        // };
+        //
+        // var numToBnDecimalfunc = function (number) {
+        //     var word = '';
+        //     word += strtr(number, num_to_bn_decimal);
+        //     return word;
+        // };
+        //
+        // var strtr = function (number, arr) {
+        //     var str = '';
+        //     for (let i = 0; i < number.length; i++) {
+        //         var ch = number.charAt(i);
+        //         str += arr[ch];
+        //     }
+        //     return str;
+        // };
+        //
+        //
+        // var numberSelector = function (number) {
+        //     if (number > 9999999) {
+        //         return crorefunc(number);
+        //     } else if (number > 99999) {
+        //         return lakhfunc(number);
+        //     } else if (number > 999) {
+        //         return thousandfunc(number);
+        //     } else if (number > 99) {
+        //         return hundredfunc(number);
+        //     } else {
+        //         return underHundredfunc(number);
+        //     }
+        // };
+        //
+        // var underHundredfunc = function (number) {
+        //     number = (number === 0) ? '' : numToBnfunc(number);
+        //     return number;
+        // };
+        //
+        // var hundredfunc = function (number) {
+        //     var a = parseInt((number / 100), 10);
+        //     var b = parseInt((number % 100), 10);
+        //     var hundredvar = (a === 0) ? '' : numToBnfunc(a) + ' ' + hundred;
+        //     return hundredvar + ' ' + underHundredfunc(b);
+        // };
+        // var thousandfunc = function (number) {
+        //     var a = parseInt((number / 1000), 10);
+        //     var b = parseInt((number % 1000), 10);
+        //     var thousandvar = (a === 0) ? '' : numToBnfunc(a) + ' ' + thousand;
+        //     return thousandvar + ' ' + hundredfunc(b);
+        // };
+        //
+        // var lakhfunc = function (number) {
+        //     var a = parseInt((number / 100000), 10);
+        //     var b = parseInt((number % 100000), 10);
+        //     var lakhVar = (a === 0) ? '' : numToBnfunc(a) + ' ' + lakh;
+        //     return lakhVar + ' ' + thousandfunc(b);
+        // };
+        //
+        // var crorefunc = function (number) {
+        //     var a = parseInt((number / 10000000), 10);
+        //     var b = parseInt((number % 10000000), 10);
+        //     var more_than_core = (a > 99) ? lakhfunc(a) : numToBnfunc(a);
+        //     return more_than_core + ' ' + crore + ' ' + lakhfunc(b);
+        // };
+
+        // console.log(numberToWord('1'));
+        // console.log(numberToWord('0'));
+        // console.log(numberToWord('47'));
+        // console.log(numberToWord('10'));
+        // console.log(numberToWord('68'));
+        // console.log(numberToWord('29'));
+        // console.log(numberToWord('100.20'));
+        // console.log(numberToWord('99.2012'));
+        // console.log(numberToWord('999.2'));
+        // console.log(numberToWord('99999.2'));
+        // console.log(numberToWord('999222.2'));
+        // console.log(numberToWord('9959868.07'));
+        // console.log(numberToWord('19598685.70'));
+        // console.log(numberToWord('11454545.08'));
+        // console.log(numberToWord('125252525.09'));
+        // console.log(numberToWord('1256895845.10'));
+        // console.log(numberToWord('1392568958450'));
+        // console.log(numberToWord('555.559'));
+
+    </script>
+</head>
+<body>
+<input type="number" class="form-control" id="example1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="inwordInBangla.js"></script>
+<script type="text/javascript">
+    $("#example1").inwordBangla();
+</script>
+</body>
+</html>
